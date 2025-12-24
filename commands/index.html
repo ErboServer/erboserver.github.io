@@ -29,7 +29,7 @@
 
   <main class="container page">
     <section class="hero-commands">
-      <div class="hero-left">
+      <div class="hero-left hero-only-text">
         <h1>コマンドリスト</h1>
         <p>このページではサーバーで使えるコマンドと文明レベルで解放される機能を一覧で確認できます。</p>
 
@@ -41,10 +41,7 @@
           </label>
         </div>
       </div>
-
-      <div class="hero-image">
-        <img src="assets/img/commands-hero.jpg" alt="エルボ コマンドイメージ" loading="lazy" />
-      </div>
+      <!-- 画像を完全に削除したため右側の領域は使いません -->
     </section>
 
     <section id="commands" class="section">
@@ -52,7 +49,7 @@
       <p class="muted">ボタンでコマンドをコピーできます。レベル制限は該当する場合に表示します。</p>
 
       <div id="commands-list" class="commands-grid">
-        <!-- 各コマンドは script.js によりここに挿入されます -->
+        <!-- 各コマンドは script-commands.js によりここに挿入されます -->
       </div>
     </section>
 
@@ -61,7 +58,7 @@
       <p class="muted">解放される機能やレシピがあるレベルのみを掲載しています。上限: <strong>150</strong></p>
 
       <div class="levels-grid" id="levels-list">
-        <!-- レベル一覧は script.js によりここに挿入されます -->
+        <!-- レベル一覧は script-commands.js によりここに挿入されます -->
       </div>
     </section>
   </main>

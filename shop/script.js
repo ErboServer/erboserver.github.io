@@ -1,4 +1,4 @@
-// script-shop-server.js
+// script-shop-server-view.js
 (function(){
   const root = document.documentElement;
   const themeToggle = document.getElementById('theme-toggle');
@@ -21,7 +21,7 @@
   });
   applyTheme(getInitialTheme());
 
-  /* --- 商品データ（サーバー用） --- */
+  /* --- 商品データ --- */
   const ITEMS = [
     /* 建築 */
     {name:'オークの原木', price:18, category:'建築'},
@@ -99,8 +99,6 @@
   const itemsGrid = document.getElementById('items-grid');
   const searchInput = document.getElementById('search');
   const categoryFilter = document.getElementById('category-filter');
-  const copyVisibleBtn = document.getElementById('copy-visible');
-  const copyAllBtn = document.getElementById('copy-all');
 
   function renderItems(){
     const q = (searchInput.value || '').trim().toLowerCase();
@@ -111,6 +109,11 @@
       if(!q) return true;
       return it.name.toLowerCase().includes(q) || it.category.toLowerCase().includes(q);
     });
+
+    if(filtered.length === 0){
+      itemsGrid.innerHTML = '<p class="muted">該当するアイテムはありません。</p>';
+      return;
+    }
 
     filtered.forEach(it => {
       const card = document.createElement('div');
@@ -123,79 +126,10 @@
           </div>
           <div class="item-price">${it.price}$</div>
         </div>
-        <div class="item-actions">
-          <button class="copy-btn" data-line="${escapeHtml(serverLine(it))}">行コピー</button>
-          <button class="copy-btn" data-csv="${escapeHtml(csvLine(it))}">CSVコピー</button>
-        </div>
       `;
       itemsGrid.appendChild(card);
     });
-
-    // イベント
-    itemsGrid.querySelectorAll('.copy-btn').forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const line = btn.getAttribute('data-line') || btn.getAttribute('data-csv');
-        try {
-          await navigator.clipboard.writeText(line);
-          const prev = btn.textContent;
-          btn.textContent = 'コピー済';
-          setTimeout(()=> btn.textContent = prev, 900);
-        } catch {
-          // フォールバック
-          const ta = document.createElement('textarea');
-          ta.value = line; document.body.appendChild(ta); ta.select();
-          try { document.execCommand('copy'); } catch {}
-          ta.remove();
-        }
-      });
-    });
-
-    if(filtered.length === 0){
-      itemsGrid.innerHTML = '<p class="muted">該当するアイテムはありません。</p>';
-    }
   }
-
-  // サーバー登録行フォーマット（例: アイテム名|カテゴリ|価格）
-  function serverLine(it){ return `${it.name}|${it.category}|${it.price}`; }
-  function csvLine(it){ return `${it.category},${it.name},${it.price}`; }
-
-  // 全件CSVコピー（ヘッダ付き）
-  copyAllBtn.addEventListener('click', async () => {
-    const header = 'カテゴリ,アイテム名,価格';
-    const rows = ITEMS.map(i => csvLine(i));
-    const csv = [header, ...rows].join('\n');
-    try {
-      await navigator.clipboard.writeText(csv);
-      copyAllBtn.textContent = 'コピー済';
-      setTimeout(()=> copyAllBtn.textContent = '全件をコピー（CSV）', 1000);
-    } catch {
-      const ta = document.createElement('textarea'); ta.value = csv; document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); } catch {}
-      ta.remove();
-    }
-  });
-
-  // 表示中をサーバー行でコピー（複数行）
-  copyVisibleBtn.addEventListener('click', async () => {
-    const q = (searchInput.value || '').trim().toLowerCase();
-    const cat = categoryFilter.value;
-    const filtered = ITEMS.filter(it => {
-      if(cat !== 'all' && it.category !== cat) return false;
-      if(!q) return true;
-      return it.name.toLowerCase().includes(q) || it.category.toLowerCase().includes(q);
-    });
-    if(filtered.length === 0){ alert('表示中のアイテムがありません'); return; }
-    const lines = filtered.map(i => serverLine(i)).join('\n');
-    try {
-      await navigator.clipboard.writeText(lines);
-      copyVisibleBtn.textContent = 'コピー済';
-      setTimeout(()=> copyVisibleBtn.textContent = '表示中をコピー（サーバー行）', 1000);
-    } catch {
-      const ta = document.createElement('textarea'); ta.value = lines; document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); } catch {}
-      ta.remove();
-    }
-  });
 
   // 検索・フィルタ
   searchInput.addEventListener('input', renderItems);

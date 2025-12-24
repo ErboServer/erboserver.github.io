@@ -52,15 +52,22 @@ body{
   background:transparent;cursor:pointer;font-size:18px;
 }
 
-/* hero */
-.hero-commands{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center;padding:28px 0}
-.hero-left h1{margin:0 0 8px}
-.hero-left p{margin:0 0 12px;color:var(--muted)}
-.hero-image img{width:100%;height:auto;border-radius:12px;border:1px solid var(--card-border);box-shadow:var(--shadow)}
+/* hero（画像なし） */
+.hero-commands{
+  display:block;
+  padding:28px 0;
+}
+.hero-only-text{
+  max-width:760px;
+  margin:0 auto;
+  text-align:center;
+}
+.hero-only-text h1{margin:0 0 8px}
+.hero-only-text p{margin:0 0 12px;color:var(--muted)}
 
 /* controls */
-.controls{display:flex;gap:12px;align-items:center;margin-top:12px}
-#cmd-search{flex:1;padding:10px;border-radius:10px;border:1px solid var(--card-border);background:var(--panel);color:var(--text)}
+.controls{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:12px}
+#cmd-search{flex:1;max-width:520px;padding:10px;border-radius:10px;border:1px solid var(--card-border);background:var(--panel);color:var(--text)}
 .checkbox{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:0.9rem}
 
 /* commands grid */
@@ -93,6 +100,7 @@ body{
 
 /* responsive */
 @media (max-width:900px){
-  .hero-commands{grid-template-columns:1fr}
   .nav{display:none}
+  .controls{flex-direction:column;gap:8px}
+  #cmd-search{max-width:100%}
 }

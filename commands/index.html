@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>エルボ — コマンドリスト</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="エルボ建国サーバー コマンドリストと文明レベル一覧" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-main">エルボ</span>
+        <span class="logo-sub">コマンドリスト</span>
+      </div>
+
+      <div class="header-controls">
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="テーマ切替">🌙</button>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">ホーム</a>
+        <a href="#commands">コマンド</a>
+        <a href="#civ-levels">文明レベル</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <section class="hero-commands">
+      <div class="hero-left">
+        <h1>コマンドリスト</h1>
+        <p>このページではサーバーで使えるコマンドと文明レベルで解放される機能を一覧で確認できます。</p>
+
+        <div class="controls">
+          <input id="cmd-search" type="search" placeholder="コマンド名や説明で検索（例: shop, level）" aria-label="コマンド検索" />
+          <label class="checkbox">
+            <input id="show-locked" type="checkbox" />
+            <span>レベル制限のあるコマンドのみ表示</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="assets/img/commands-hero.jpg" alt="エルボ コマンドイメージ" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="commands" class="section">
+      <h2>コマンド一覧</h2>
+      <p class="muted">ボタンでコマンドをコピーできます。レベル制限は該当する場合に表示します。</p>
+
+      <div id="commands-list" class="commands-grid">
+        <!-- 各コマンドは script.js によりここに挿入されます -->
+      </div>
+    </section>
+
+    <section id="civ-levels" class="section section-alt">
+      <h2>文明レベルの機能（12/2時点）</h2>
+      <p class="muted">解放される機能やレシピがあるレベルのみを掲載しています。上限: <strong>150</strong></p>
+
+      <div class="levels-grid" id="levels-list">
+        <!-- レベル一覧は script.js によりここに挿入されます -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© エルボ建国サーバー</p>
+      <p class="footer-note">本サイトはMinecraft公式とは一切関係ありません。</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

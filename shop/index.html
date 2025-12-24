@@ -2,9 +2,9 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <title>エルボ — サーバー用ショップアイテムリスト</title>
+  <title>エルボ — ショップ</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="サーバー内ショップ用アイテムリスト（建築・モブドロップ・鉱石・レア・スポーンエッグ）" />
+  <meta name="description" content="サーバー内ショップ用アイテムリスト（閲覧用）" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,7 +12,7 @@
     <div class="container header-inner">
       <div class="logo">
         <span class="logo-main">エルボ</span>
-        <span class="logo-sub">ショップ（サーバー用）</span>
+        <span class="logo-sub">ショップ</span>
       </div>
 
       <div class="header-controls">
@@ -21,16 +21,16 @@
 
       <nav class="nav">
         <a href="index.html">ホーム</a>
-        <a href="index-commands.html">コマンド</a>
-        <a href="index-shop.html">ショップ（フロント）</a>
+        <a href="commands/index.html">コマンド</a>
+        <a href="shop/index.html">ショップ（フロント）</a>
       </nav>
     </div>
   </header>
 
   <main class="container page">
     <section class="shop-hero">
-      <h1>サーバー用ショップアイテムリスト</h1>
-      <p class="muted">このページは運営がサーバー内ショップに登録するための一覧表示・コピー用です。フォーマットは「CSV」「サーバー登録行（例: item|category|price）」の2種類を用意しています。</p>
+      <h1>ショップ</h1>
+      <p class="muted">サーバープレイヤー向けの閲覧ページです。価格やカテゴリを確認できます。</p>
 
       <div class="shop-controls">
         <input id="search" type="search" placeholder="アイテム名で検索" aria-label="アイテム検索" />
@@ -42,35 +42,26 @@
           <option value="レアアイテム">レアアイテム</option>
           <option value="スポーンエッグ">スポーンエッグ</option>
         </select>
-
-        <div class="export-controls">
-          <button id="copy-visible" class="btn small">表示中をコピー（サーバー行）</button>
-          <button id="copy-all" class="btn small">全件をコピー（CSV）</button>
-        </div>
       </div>
     </section>
 
     <section id="shop" class="section">
       <h2>商品一覧</h2>
       <div id="items-grid" class="items-grid" role="list">
-        <!-- 商品カードは script-shop-server.js が挿入 -->
+        <!-- 商品カードは script-shop-server-view.js が挿入 -->
       </div>
     </section>
 
-    <section id="format-help" class="section section-alt">
-      <h2>フォーマット例</h2>
-      <p class="muted">コピーされる行の例</p>
-      <ul>
-        <li><strong>サーバー登録行（デフォルト）</strong>: <code>オークの原木|建築|18</code></li>
-        <li><strong>CSV（全件）</strong>: <code>カテゴリ,アイテム名,価格</code>（ヘッダ付き）</li>
-      </ul>
+    <section id="shop-info" class="section section-alt">
+      <h2>注意事項</h2>
+      <p class="muted">このページは閲覧用です。購入やサーバー内での受け取りはゲーム内の手順に従ってください。</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© エルボ建国サーバー</p>
-      <p class="footer-note">本ページは運営向けのアイテムリストです。実際の登録はサーバー側で行ってください。</p>
+      <p class="footer-note">本ページはMinecraft公式とは一切関係ありません。</p>
     </div>
   </footer>
 

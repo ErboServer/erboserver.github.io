@@ -2,9 +2,9 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <title>エルボ — ショップ</title>
+  <title>エルボ — サーバー用ショップアイテムリスト</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="エルボ建国サーバー ショップ一覧" />
+  <meta name="description" content="サーバー内ショップ用アイテムリスト（建築・モブドロップ・鉱石・レア・スポーンエッグ）" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,7 +12,7 @@
     <div class="container header-inner">
       <div class="logo">
         <span class="logo-main">エルボ</span>
-        <span class="logo-sub">ショップ</span>
+        <span class="logo-sub">ショップ（サーバー用）</span>
       </div>
 
       <div class="header-controls">
@@ -22,15 +22,15 @@
       <nav class="nav">
         <a href="index.html">ホーム</a>
         <a href="index-commands.html">コマンド</a>
-        <a href="#shop">ショップ</a>
+        <a href="index-shop.html">ショップ（フロント）</a>
       </nav>
     </div>
   </header>
 
   <main class="container page">
     <section class="shop-hero">
-      <h1>ショップ</h1>
-      <p class="muted">カテゴリを切り替えて商品を確認、カートに入れて購入（サーバー内での処理は別途）できます。</p>
+      <h1>サーバー用ショップアイテムリスト</h1>
+      <p class="muted">このページは運営がサーバー内ショップに登録するための一覧表示・コピー用です。フォーマットは「CSV」「サーバー登録行（例: item|category|price）」の2種類を用意しています。</p>
 
       <div class="shop-controls">
         <input id="search" type="search" placeholder="アイテム名で検索" aria-label="アイテム検索" />
@@ -42,50 +42,35 @@
           <option value="レアアイテム">レアアイテム</option>
           <option value="スポーンエッグ">スポーンエッグ</option>
         </select>
-        <div class="cart-summary" id="cart-summary" aria-live="polite">
-          <button id="open-cart" class="btn small">カート (<span id="cart-count">0</span>)</button>
-          <span class="cart-total">合計: <strong id="cart-total">0$</strong></span>
+
+        <div class="export-controls">
+          <button id="copy-visible" class="btn small">表示中をコピー（サーバー行）</button>
+          <button id="copy-all" class="btn small">全件をコピー（CSV）</button>
         </div>
       </div>
     </section>
 
     <section id="shop" class="section">
       <h2>商品一覧</h2>
-      <div id="items-grid" class="items-grid">
-        <!-- 商品カードは script-shop.js が挿入 -->
+      <div id="items-grid" class="items-grid" role="list">
+        <!-- 商品カードは script-shop-server.js が挿入 -->
       </div>
     </section>
 
-    <section id="shop-info" class="section section-alt">
-      <h2>購入について</h2>
-      <p class="muted">このページは商品一覧とカート機能を提供します。実際の決済やサーバー内での受け取りは運営の案内に従ってください。</p>
+    <section id="format-help" class="section section-alt">
+      <h2>フォーマット例</h2>
+      <p class="muted">コピーされる行の例</p>
+      <ul>
+        <li><strong>サーバー登録行（デフォルト）</strong>: <code>オークの原木|建築|18</code></li>
+        <li><strong>CSV（全件）</strong>: <code>カテゴリ,アイテム名,価格</code>（ヘッダ付き）</li>
+      </ul>
     </section>
   </main>
-
-  <!-- カートモーダル -->
-  <div id="cart-modal" class="cart-modal" aria-hidden="true" role="dialog" aria-label="カート">
-    <div class="cart-panel">
-      <header class="cart-header">
-        <h3>カート</h3>
-        <button id="close-cart" class="close-btn" aria-label="閉じる">✕</button>
-      </header>
-      <div id="cart-items" class="cart-items">
-        <!-- カート内アイテム -->
-      </div>
-      <footer class="cart-footer">
-        <div class="cart-footer-left">合計: <strong id="cart-modal-total">0$</strong></div>
-        <div class="cart-footer-right">
-          <button id="clear-cart" class="btn secondary">カートを空にする</button>
-          <button id="checkout" class="btn primary">購入（申請）</button>
-        </div>
-      </footer>
-    </div>
-  </div>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© エルボ建国サーバー</p>
-      <p class="footer-note">本サイトはMinecraft公式とは一切関係ありません。</p>
+      <p class="footer-note">本ページは運営向けのアイテムリストです。実際の登録はサーバー側で行ってください。</p>
     </div>
   </footer>
 

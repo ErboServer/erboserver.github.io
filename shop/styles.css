@@ -8,45 +8,30 @@
 *{box-sizing:border-box}
 body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 .container{max-width:1080px;margin:0 auto;padding:0 16px}
-
-/* header */
 .site-header{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--card-border);position:sticky;top:0;background:transparent;z-index:50}
 .logo{display:flex;flex-direction:column}
 .logo-main{font-weight:800}
 .logo-sub{font-size:0.85rem;opacity:0.8}
 .nav{display:flex;gap:12px}
 .nav a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px}
-
-/* theme toggle */
 .theme-toggle{width:40px;height:40px;border-radius:8px;border:1px solid var(--card-border);background:transparent;cursor:pointer;font-size:18px}
 
-/* hero */
 .shop-hero{padding:20px 0;text-align:center}
 .shop-controls{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:12px;flex-wrap:wrap}
 #search{padding:10px;border-radius:10px;border:1px solid var(--card-border);background:var(--panel);color:var(--text);min-width:220px}
 #category-filter{padding:10px;border-radius:10px;border:1px solid var(--card-border);background:var(--panel);color:var(--text)}
-.export-controls{display:flex;gap:8px;align-items:center}
-.btn{padding:8px 12px;border-radius:10px;border:1px solid transparent;cursor:pointer}
-.btn.small{padding:6px 8px;font-size:0.9rem}
-.btn.primary{background:linear-gradient(135deg,var(--accent),#7c3aed);color:#fff}
-.btn.secondary{background:transparent;border:1px solid var(--card-border)}
 
-/* items grid */
 .items-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:18px}
 .item-card{background:var(--panel);border:1px solid var(--card-border);padding:12px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
 .item-top{display:flex;justify-content:space-between;align-items:center}
 .item-name{font-weight:700}
 .item-cat{font-size:0.85rem;color:var(--muted)}
 .item-price{font-family:monospace;font-weight:800}
-.item-actions{display:flex;gap:8px;align-items:center;margin-top:8px}
-.copy-btn{padding:8px 10px;border-radius:8px;border:1px solid var(--card-border);background:transparent;cursor:pointer}
 
-/* section */
 .section{padding:20px 0}
 .section-alt{background:transparent;padding:18px 0;border-top:1px solid var(--card-border)}
 .footer-inner{text-align:center;color:var(--muted);font-size:0.9rem;padding:20px 0}
 
-/* responsive */
 @media (max-width:700px){
   .shop-controls{flex-direction:column;gap:8px}
   .items-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}

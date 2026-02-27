@@ -17,14 +17,14 @@
 
 /* ダーク */
 :root[data-theme="dark"]{
-  --bg: #0b1220;                /* 真っ黒を避ける */
-  --panel: #111827;             /* 明度を上げる */
-  --text: #f1f5f9;              /* 明るい本文 */
-  --muted: #cbd5e1;             /* ← 見えにくさ改善 */
+  --bg: #0f172a;        /* 少し明るく */
+  --panel: #1e293b;     /* コントラスト強化 */
+  --text: #ffffff;      /* 純白 */
+  --muted: #e2e8f0;     /* 補助文字も明るく */
   --accent-1: #38bdf8;
   --accent-2: #7c3aed;
-  --glass: rgba(11,18,32,0.8);
-  --card-border: rgba(148,163,184,0.18);
+  --glass: rgba(15,23,42,0.85);
+  --card-border: rgba(255,255,255,0.08);
   --shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 

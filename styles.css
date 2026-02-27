@@ -1,8 +1,3 @@
-/* =========================
-   テーマ変数
-========================= */
-
-/* ライト */
 :root{
   --bg: #f4f6fb;
   --panel: #ffffff;
@@ -15,22 +10,18 @@
   --shadow: 0 8px 20px rgba(2,6,23,0.06);
 }
 
-/* ダーク */
+
 :root[data-theme="dark"]{
-  --bg: #0f172a;        /* 少し明るく */
-  --panel: #1e293b;     /* コントラスト強化 */
-  --text: #ffffff;      /* 純白 */
-  --muted: #e2e8f0;     /* 補助文字も明るく */
+  --bg: #0f172a;    
+  --panel: #1e293b; 
+  --text: #ffffff; 
+  --muted: #e2e8f0;
   --accent-1: #38bdf8;
   --accent-2: #7c3aed;
   --glass: rgba(15,23,42,0.85);
   --card-border: rgba(255,255,255,0.08);
   --shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
-
-/* =========================
-   ベース
-========================= */
 
 *,
 *::before,
@@ -60,9 +51,6 @@ img{
   display:block;
 }
 
-/* =========================
-   共通レイアウト
-========================= */
 
 .container{
   width:100%;
@@ -96,9 +84,6 @@ p{
   color: var(--text);
 }
 
-/* =========================
-   ヘッダー
-========================= */
 
 .site-header{
   position:sticky;
@@ -146,9 +131,6 @@ p{
   color: var(--text);
 }
 
-/* =========================
-   ヒーロー
-========================= */
 
 .hero{
   padding:80px 0 64px;
@@ -177,9 +159,6 @@ p{
   gap:12px;
 }
 
-/* =========================
-   ボタン
-========================= */
 
 .btn{
   display:inline-flex;
@@ -214,9 +193,6 @@ p{
   background: rgba(148,163,184,0.12);
 }
 
-/* =========================
-   カード系
-========================= */
 
 .feature-card,
 .nation-card,
@@ -240,9 +216,6 @@ p{
   color: var(--muted);
 }
 
-/* =========================
-   フッター
-========================= */
 
 .site-footer{
   padding:24px 0 32px;
@@ -256,9 +229,6 @@ p{
   color: var(--muted);
 }
 
-/* =========================
-   レスポンシブ
-========================= */
 
 @media (max-width:768px){
   .hero-inner{
@@ -270,9 +240,6 @@ p{
   }
 }
 
-/* =========================
-   アニメーション
-========================= */
 
 .fade-in {
   opacity: 0;
@@ -287,7 +254,6 @@ p{
   }
 }
 
-/* スクロール表示 */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -299,7 +265,6 @@ p{
   transform: translateY(0);
 }
 
-/* カードホバー強化 */
 .feature-card,
 .nation-card,
 .community-card,
@@ -315,7 +280,6 @@ p{
   box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
-/* ボタン強化 */
 .btn {
   transition: all 0.25s ease;
 }
@@ -325,7 +289,6 @@ p{
   filter: brightness(1.1);
 }
 
-/* ヒーロー改善 */
 .hero {
   background: linear-gradient(
     180deg,
@@ -351,4 +314,47 @@ p{
   border-radius:16px;
   border:1px solid var(--card-border);
   box-shadow: var(--shadow);
+}
+
+.server-ip-box{
+  margin:15px 0;
+  padding:12px 16px;
+  background:var(--panel);
+  border:1px solid var(--card-border);
+  border-radius:12px;
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+}
+
+.sns-links{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.sns-links a{
+  padding:10px 16px;
+  background:var(--panel);
+  border-radius:10px;
+  border:1px solid var(--card-border);
+  text-decoration:none;
+}
+
+.cookie-banner{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:var(--panel);
+  border-top:1px solid var(--card-border);
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
+
+.btn.small{
+  padding:6px 12px;
+  font-size:0.85rem;
 }

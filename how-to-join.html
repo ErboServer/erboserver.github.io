@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>参加方法 | エルボ！</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="glass-header">
+  <h1>エルボ！参加方法</h1>
+  <a href="index.html" class="back-btn">← トップへ戻る</a>
+</header>
+
+<section class="hero join-hero">
+  <h2>今すぐエルボ！へ参加しよう</h2>
+  <p>建国・工業・戦争・平和暮らし。あなたのスタイルで参加できます。</p>
+</section>
+
+<section class="join-steps">
+
+  <!-- STEP 1 -->
+  <div class="step-card">
+    <span class="step-number">01</span>
+    <h3>Discordに参加</h3>
+    <p>まずは公式Discordサーバーへ参加してください。</p>
+    <a href="https://discord.gg/GznDJnyqZa" target="_blank" class="primary-btn">
+      Discordへ参加
+    </a>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step-card">
+    <span class="step-number">02</span>
+    <h3>サーバー情報</h3>
+
+    <div class="server-info">
+      <div class="copy-box">
+        <span>IP:</span>
+        <code id="ip">natsukida.f5.si</code>
+        <button onclick="copyText('ip')">コピー</button>
+      </div>
+
+      <div class="copy-box">
+        <span>Port:</span>
+        <code id="port">53218</code>
+        <button onclick="copyText('port')">コピー</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step-card">
+    <span class="step-number">03</span>
+    <h3>ルール確認</h3>
+    <p>Discord内のルールを必ず確認してください。</p>
+    <a href="rules.html" class="secondary-btn">ルールを見る</a>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step-card">
+    <span class="step-number">04</span>
+    <h3>プレイ開始</h3>
+    <p>
+      火打石から文明を築き、都市を作るか、  
+      工業を発展させるか、戦争をするか、平和に暮らすかはあなた次第です。
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 エルボ！サーバー</p>
+</footer>
+
+<!-- Toast -->
+<div id="toast">コピーしました</div>
+
+<script>
+/* スクロールアニメーション */
+const cards = document.querySelectorAll('.step-card');
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.85;
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if(top < trigger){
+      card.classList.add('visible');
+    }
+  });
+});
+
+/* コピー機能 */
+function copyText(id){
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+  showToast();
+}
+
+/* トースト表示 */
+function showToast(){
+  const toast = document.getElementById("toast");
+  toast.classList.add("show");
+  setTimeout(()=> toast.classList.remove("show"),2000);
+}
+</script>
+
+</body>
+</html>

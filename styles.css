@@ -152,7 +152,7 @@ p{
 
 .hero{
   padding:80px 0 64px;
-  background: radial-gradient(circle at top, var(--accent-1) 0%, var(--bg) 60%);
+  background: var(--panel);
 }
 
 .hero-inner{

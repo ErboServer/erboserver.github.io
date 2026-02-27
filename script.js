@@ -1,4 +1,3 @@
-// スクロールフェードイン
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {

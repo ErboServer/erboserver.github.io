@@ -333,3 +333,22 @@ p{
     var(--panel)
   );
 }
+
+.sub-hero{
+  padding:60px 0 40px;
+  background: var(--panel);
+  border-bottom:1px solid var(--card-border);
+}
+
+.legal-container{
+  display:grid;
+  gap:28px;
+}
+
+.legal-card{
+  background: var(--panel);
+  padding:28px;
+  border-radius:16px;
+  border:1px solid var(--card-border);
+  box-shadow: var(--shadow);
+}

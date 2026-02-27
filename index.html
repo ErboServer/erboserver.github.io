@@ -1,160 +1,71 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <title>エルボ建国サーバー | Minecraft統合版</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Minecraft統合版 建国サーバー『エルボ』公式サイト。参加方法、ルール、国紹介など。" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エルボサーバー | 公式サイト</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <span class="logo-main">エルボ</span>
-        <span class="logo-sub">建国サーバー</span>
-      </div>
 
-      <div class="header-controls">
-        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="テーマ切替">
-          <span class="icon-sun" aria-hidden="true">☀️</span>
-          <span class="icon-moon" aria-hidden="true">🌙</span>
-        </button>
-      </div>
-
-      <nav class="nav">
-        <a href="#about">エルボとは</a>
-        <a href="#how-to-join">参加方法</a>
-        <a href="#nations">国一覧</a>
-        <a href="rules.html">ルール</a>
-        <a href="#community">コミュニティ</a>
-        <a href="legal.html">利用規約</a>
-        <a href="privacy.html">プライバシーポリシー</a>
-      </nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <span class="logo-main">ERBO SERVER</span>
+      <span class="logo-sub">Official Website</span>
     </div>
-  </header>
 
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>マイクラ統合版 建国サーバー「エルボ」</h1>
-        <p>国をつくり、同盟や戦争、経済、外交――プレイヤー同士の物語で世界が動くサーバーです。</p>
-        <div class="hero-actions">
-          <a href="#how-to-join" class="btn primary">今すぐ参加方法を見る</a>
-          <a href="#nations" class="btn secondary">国一覧を見る</a>
-        </div>
+    <nav class="nav">
+      <a href="#about">エルボとは</a>
+      <a href="#join">参加方法</a>
+      <a href="rules.html">ルール</a>
+      <a href="legal.html">利用規約</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+  </div>
+</header>
 
-        <div class="server-info">
-          <div><span class="label">対応版</span><span class="value">Minecraft 統合版 (Bedrock)</span></div>
-          <div><span class="label">サーバーアドレス</span><span class="value">natsukida.f5.si</span></div>
-          <div><span class="label">ポート</span><span class="value">53218</span></div>
-        </div>
-      </div>
+<section class="hero fade-in">
+  <div class="container hero-inner">
+    <div>
+      <h1>文明発達系 建国サバイバル</h1>
+      <p>国家を作り、発展させ、時には戦争も起きる。本格派サバイバル体験。</p>
 
-      <div class="hero-image">
-        <img src="assets/img/hero.jpg" alt="エルボのサーバースクリーンショット" class="hero-img" loading="lazy" />
+      <div class="hero-actions">
+        <a href="#join" class="btn primary">参加する</a>
+        <a href="https://status.erbo.f5.si" target="_blank" class="btn secondary">📊 サーバーステータス</a>
+        <a href="https://apply.erbo.f5.si" target="_blank" class="btn secondary">📝 運営応募</a>
       </div>
     </div>
-  </section>
 
-  <section id="about" class="section">
-    <div class="container">
-      <h2>エルボとは</h2>
-      <p>エルボは、Minecraft統合版で遊べる「建国・国家運営」をテーマにしたマルチサーバーです。プレイヤーは自分の国をつくり、仲間を集め、他国との同盟や貿易、戦争、外交を通じて、サーバーの歴史をつくっていきます。</p>
+    <img src="assets/img/hero.jpg" alt="Hero Image" class="hero-img">
+  </div>
+</section>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>国を建てる</h3>
-          <p>自分の国名、方針、文化を決めて、国をつくることができます。建築・内政が好きな人にもおすすめです。</p>
-        </div>
-        <div class="feature-card">
-          <h3>経済・外交・戦争</h3>
-          <p>資源や通貨を利用した経済システム、他国との同盟・条約、ルールに基づいた戦争イベントなど、長期的に遊べる要素があります。</p>
-        </div>
-        <div class="feature-card">
-          <h3>コミュニティ重視</h3>
-          <p>Discordを中心に、運営との相談やイベント告知、国同士の交渉など、プレイヤー同士の交流を大切にしています。</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="about" class="section section-alt reveal">
+  <div class="container">
+    <h2>エルボとは</h2>
+    <p>建国・外交・戦争を中心とした高度な文明発達型サーバーです。</p>
+  </div>
+</section>
 
-  <section id="how-to-join" class="section section-alt">
-    <div class="container">
-      <h2>基本的なガイド</h2>
-      <ol class="steps">
-        <li>
-          <h3>1. Discordサーバーに参加</h3>
-          <p>下の「コミュニティ」からエルボのDiscordサーバーに参加してください。最新情報やルール、参加申請はすべてDiscordで案内しています。</p>
-        </li>
-        <li>
-          <h3>2. ルールを確認</h3>
-          <p>荒らし・暴言などを防ぐためのルールがあります。参加する前に必ず目を通してください。</p>
-        </li>
-        <li>
-          <h3>3. 自己紹介</h3>
-          <p>何をするにしても自己紹介は必要です。自己紹介は任意ですが交流をすることは大切です。</p>
-        </li>
-        <li>
-          <h3>4. サーバーに接続</h3>
-          <p>Minecraft統合版で「サーバーを追加」から、上のサーバーアドレスとポートを入力して接続してください。</p>
-        </li>
-      </ol>
-    </div>
-  </section>
+<section id="join" class="section reveal">
+  <div class="container">
+    <h2>参加方法</h2>
+    <ol class="steps">
+      <li>Discordに参加</li>
+      <li>国を選択</li>
+      <li>サーバーにログイン</li>
+    </ol>
+  </div>
+</section>
 
-  <section id="nations" class="section">
-    <div class="container">
-      <h2>国一覧（一部）</h2>
-      <p>エルボには、さまざまな国が存在します。ここでは一部の国を紹介します。</p>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 ERBO SERVER</p>
+  </div>
+</footer>
 
-      <div class="nations-grid">
-        <article class="nation-card">
-          <img src="assets/img/chicken.jpg" alt="チキン共栄圏の拠点" loading="lazy" />
-          <h3>チキン共栄圏</h3>
-          <p>はむすけ共栄圏とチキン国が統合してできた国家</p>
-        </article>
-
-        <article class="nation-card">
-          <img src="assets/img/maikura.jpg" alt="写真なし" loading="lazy" />
-          <h3>萎刻王国</h3>
-          <p>舞倉王国から改名されてできた王国。現在も文明レベル132でかなり高い</p>
-        </article>
-
-        <article class="nation-card">
-          <img src="assets/img/karon.jpg" alt="写真なし" loading="lazy" />
-          <h3>かろん共栄圏</h3>
-          <p>なんとあの大規模建国サーバーの管理者「かろん」が作った国家。圧倒的物量が特徴</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="community" class="section">
-    <div class="container">
-      <h2>コミュニティ・リンク</h2>
-      <div class="community-grid">
-        <div class="community-card">
-          <h3>Discordサーバー</h3>
-          <p>参加申請、ルール確認、国同士の交流、イベント告知など、すべてDiscordで行っています。</p>
-          <a href="https://discord.erbo.f5.si" class="btn primary" target="_blank" rel="noopener">Discordに参加する</a>
-        </div>
-        <div class="community-card">
-          <h3>X（Twitter）</h3>
-          <p>サーバーのスクリーンショットやイベント告知を投稿しています。#エルボ建国サーバー で感想もぜひ。</p>
-          <a href="https://x.com/Natsukidakunn" class="btn secondary" target="_blank" rel="noopener">Xアカウントを見る</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© エルボ建国サーバー</p>
-      <p class="footer-note">本サイトはMinecraft公式とは一切関係ありません。</p>
-    </div>
-  </footer>
-
-  <script src="script.js" defer></script>
+<script src="script.js"></script>
 </body>
 </html>

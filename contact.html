@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ | エルボ！</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div>
+      <div class="logo-main">エルボ！</div>
+      <span class="logo-sub">建国経済サバイバルサーバー</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">トップ</a>
+      <a href="how-to-join.html">参加方法</a>
+      <a href="rules.html">ルール</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+
+    <h2>お問い合わせ</h2>
+    <p style="color:var(--text-soft); margin-bottom:30px;">
+      ご質問・不具合報告・提案などはこちらからご連絡ください。
+    </p>
+
+    <div class="legal-card">
+
+      <h3>メール</h3>
+      <div class="copy-box">
+        <code id="email">erubo.info@gmail.com</code>
+        <button onclick="copyText('email')">コピー</button>
+        <a href="mailto:erubo.info@gmail.com" class="btn secondary small">送信する</a>
+      </div>
+
+      <hr style="margin:30px 0; border-color:var(--card-border);">
+
+      <h3>Discord</h3>
+      <p style="color:var(--text-soft); margin-bottom:10px;">
+        サーバー内の #お問い合わせ チャンネルをご利用ください。
+      </p>
+      <a href="https://discord.gg/GznDJnyqZa" target="_blank" class="btn primary">
+        Discordへ参加
+      </a>
+
+      <hr style="margin:30px 0; border-color:var(--card-border);">
+
+      <h3>𝕏 (旧Twitter)</h3>
+      <div class="copy-box">
+        <code id="xid">@Natsukidakunn</code>
+        <button onclick="copyText('xid')">コピー</button>
+        <a href="https://x.com/Natsukidakunn" target="_blank" class="btn secondary small">
+          プロフィールを見る
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    © 2026 エルボ！サーバー
+  </div>
+</footer>
+
+<div id="toast">コピーしました</div>
+
+<script>
+function copyText(id){
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+  showToast();
+}
+
+function showToast(){
+  const toast = document.getElementById("toast");
+  toast.classList.add("show");
+  setTimeout(()=> toast.classList.remove("show"),2000);
+}
+</script>
+
+</body>
+</html>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>エルボサーバー | 公式サイト</title>
+  <meta name="description" content="文明発達系建国サバイバル エルボサーバー公式サイト">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,28 +21,37 @@
       <a href="#join">参加方法</a>
       <a href="rules.html">ルール</a>
       <a href="legal.html">利用規約</a>
-      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="privacy.html">プライバシー</a>
     </nav>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero fade-in">
   <div class="container hero-inner">
     <div>
       <h1>文明発達系 建国サバイバル</h1>
       <p>国家を作り、発展させ、時には戦争も起きる。本格派サバイバル体験。</p>
 
+      <!-- サーバーIP -->
+      <div class="server-ip-box">
+        <span>サーバーIP：</span>
+        <strong id="server-ip">natsukida.f5.si:53218</strong>
+        <button onclick="copyIP()" class="btn small">コピー</button>
+      </div>
+
       <div class="hero-actions">
         <a href="#join" class="btn primary">参加する</a>
-        <a href="https://status.erbo.f5.si" target="_blank" class="btn secondary">📊 サーバーステータス</a>
+        <a href="https://status.erbo.f5.si" target="_blank" class="btn secondary">📊 ステータス</a>
         <a href="https://apply.erbo.f5.si" target="_blank" class="btn secondary">📝 運営応募</a>
       </div>
     </div>
 
-    <img src="assets/img/hero.jpg" alt="Hero Image" class="hero-img">
+    <img src="assets/img/hero.jpg" alt="Server Image" class="hero-img">
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="section section-alt reveal">
   <div class="container">
     <h2>エルボとは</h2>
@@ -49,6 +59,7 @@
   </div>
 </section>
 
+<!-- JOIN -->
 <section id="join" class="section reveal">
   <div class="container">
     <h2>参加方法</h2>
@@ -60,11 +71,53 @@
   </div>
 </section>
 
+<!-- SNS -->
+<section class="section section-alt reveal">
+  <div class="container">
+    <h2>公式SNS</h2>
+    <div class="sns-links">
+      <a href="#" target="_blank">Discord</a>
+      <a href="#" target="_blank">YouTube</a>
+      <a href="#" target="_blank">X</a>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">TikTok</a>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container footer-inner">
     <p>© 2026 ERBO SERVER</p>
   </div>
 </footer>
+
+<!-- Cookie バナー -->
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    当サイトではサービス向上のためCookieを使用しています。
+    続行することで同意したものとみなします。
+  </p>
+  <button onclick="acceptCookies()" class="btn primary small">同意する</button>
+</div>
+
+<script>
+function copyIP() {
+  const ip = document.getElementById("server-ip").innerText;
+  navigator.clipboard.writeText(ip);
+  alert("サーバーIPをコピーしました");
+}
+
+function acceptCookies() {
+  localStorage.setItem("cookieAccepted", "true");
+  document.getElementById("cookie-banner").style.display = "none";
+}
+
+window.onload = function () {
+  if (localStorage.getItem("cookieAccepted")) {
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+}
+</script>
 
 <script src="script.js"></script>
 </body>

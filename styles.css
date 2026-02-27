@@ -269,3 +269,67 @@ p{
     display:none;
   }
 }
+
+/* =========================
+   アニメーション
+========================= */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* スクロール表示 */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* カードホバー強化 */
+.feature-card,
+.nation-card,
+.community-card,
+.steps li {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover,
+.nation-card:hover,
+.community-card:hover,
+.steps li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* ボタン強化 */
+.btn {
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* ヒーロー改善 */
+.hero {
+  background: linear-gradient(
+    180deg,
+    rgba(56,189,248,0.08),
+    var(--panel)
+  );
+}

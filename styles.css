@@ -358,3 +358,68 @@ p{
   padding:6px 12px;
   font-size:0.85rem;
 }
+
+.discord-wrapper iframe{
+  width:100%;
+  max-width:350px;
+  height:500px;
+  border-radius:12px;
+}
+
+.sns-icons{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.sns-icons a{
+  width:45px;
+  height:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--panel);
+  border-radius:12px;
+  border:1px solid var(--card-border);
+}
+
+.sns-icons svg{
+  width:22px;
+  fill:white;
+}
+
+.cookie-banner{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:var(--panel);
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-top:1px solid var(--card-border);
+  z-index:1000;
+}
+
+.toast{
+  position:fixed;
+  bottom:80px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#111;
+  padding:10px 20px;
+  border-radius:20px;
+  opacity:0;
+  transition:0.3s;
+}
+
+.toast.show{
+  opacity:1;
+}
+
+@media(max-width:768px){
+  .hero-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+}

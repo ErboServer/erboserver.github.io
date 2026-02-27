@@ -21,7 +21,6 @@
 
 <section class="join-steps">
 
-  <!-- STEP 1 -->
   <div class="step-card">
     <span class="step-number">01</span>
     <h3>Discordに参加</h3>
@@ -31,7 +30,6 @@
     </a>
   </div>
 
-  <!-- STEP 2 -->
   <div class="step-card">
     <span class="step-number">02</span>
     <h3>サーバー情報</h3>
@@ -51,7 +49,6 @@
     </div>
   </div>
 
-  <!-- STEP 3 -->
   <div class="step-card">
     <span class="step-number">03</span>
     <h3>ルール確認</h3>
@@ -59,7 +56,6 @@
     <a href="rules.html" class="secondary-btn">ルールを見る</a>
   </div>
 
-  <!-- STEP 4 -->
   <div class="step-card">
     <span class="step-number">04</span>
     <h3>プレイ開始</h3>
@@ -72,14 +68,12 @@
 </section>
 
 <footer>
-  <p>© 2026 エルボ！サーバー</p>
+  <p>© 2026 Natsuki Community. All rights reserved.</p>
 </footer>
 
-<!-- Toast -->
 <div id="toast">コピーしました</div>
 
 <script>
-/* スクロールアニメーション */
 const cards = document.querySelectorAll('.step-card');
 window.addEventListener('scroll', () => {
   const trigger = window.innerHeight * 0.85;
@@ -91,14 +85,12 @@ window.addEventListener('scroll', () => {
   });
 });
 
-/* コピー機能 */
 function copyText(id){
   const text = document.getElementById(id).innerText;
   navigator.clipboard.writeText(text);
   showToast();
 }
 
-/* トースト表示 */
 function showToast(){
   const toast = document.getElementById("toast");
   toast.classList.add("show");

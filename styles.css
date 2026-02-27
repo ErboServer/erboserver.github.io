@@ -163,12 +163,10 @@ p{
 }
 
 .hero h1{
-  font-size:2.2rem;
-  margin-bottom:16px;
+  color:#ffffff;
 }
 
 .hero p{
-  font-size:0.95rem;
   color: var(--muted);
 }
 

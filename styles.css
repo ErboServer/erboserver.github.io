@@ -290,9 +290,6 @@ body{
   font-size:0.85rem;
 }
 
-/* =========================
-   ANIMATIONS
-========================= */
 
 .fade-in{
   animation:fadeIn 0.8s ease forwards;

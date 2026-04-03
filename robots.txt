@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://erbo.f5.si/sitemap.xml

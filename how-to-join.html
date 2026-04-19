@@ -1,102 +1,173 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>エルボサーバー | 参加方法</title>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>エルボサーバー | 参加方法</title>
+  <meta name="description" content="エルボ！サーバーへの参加方法を案内します。Discord参加、サーバーIP、Port、ルール確認、ロビー参加までの手順をまとめています。" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://erbo.f5.si/how-to-join.html" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="エルボ！" />
+  <meta property="og:title" content="エルボサーバー | 参加方法" />
+  <meta property="og:description" content="エルボ！サーバーへの参加方法。Discord参加、サーバーIP、Port、ルール確認、ロビー参加の手順を掲載。" />
+  <meta property="og:url" content="https://erbo.f5.si/how-to-join.html" />
+  <meta property="og:image" content="https://erbo.f5.si/assets/img/ogp.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="エルボ！サーバー参加方法の紹介画像" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="エルボサーバー | 参加方法" />
+  <meta name="twitter:description" content="エルボ！サーバーへの参加方法をわかりやすく案内します。" />
+  <meta name="twitter:image" content="https://erbo.f5.si/assets/img/ogp.jpg" />
+  <meta name="twitter:image:alt" content="エルボ！サーバー参加方法の紹介画像" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "エルボ！サーバーの参加方法",
+    "description": "Discord参加からロビー参加、NPCでの参加までの手順",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Discordに参加",
+        "text": "公式Discordサーバーに参加します。"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "サーバー情報を確認",
+        "text": "IPとPortを確認します。"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "ルール確認",
+        "text": "ルールを確認してから参加します。"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "ロビー参加",
+        "text": "ロビーに入り、NPCから本参加します。"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<header class="glass-header">
-  <h1>エルボ参加方法</h1>
-  <a href="index.html" class="back-btn">← トップへ戻る</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <span class="logo-main">ERBO SERVER</span>
+      <span class="logo-sub">参加方法</span>
+    </div>
+
+    <div class="header-controls">
+      <button id="theme-toggle" class="theme-toggle" aria-pressed="false">
+        ☀️ / 🌙
+      </button>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">トップ</a>
+      <a href="about.html">エルボとは</a>
+      <a href="how-to-join.html">参加方法</a>
+      <a href="rules.html">ルール</a>
+      <a href="legal.html">利用規約</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero join-hero">
-  <h2>今すぐエルボ！へ参加しよう</h2>
-  <p>建国・工業・戦争・平和暮らし。あなたのスタイルで参加できます。</p>
-</section>
+<section class="sub-hero fade-in">
+  <div class="container">
+    <h1>エルボ！サーバーの参加方法</h1>
+    <p class="rule-note">Discord参加からロビー参加まで、必要な手順をまとめています。</p>
 
-<section class="join-steps">
-
-  <div class="step-card">
-    <span class="step-number">01</span>
-    <h3>Discordに参加</h3>
-    <p>まずは公式Discordサーバーへ参加してください。</p>
-    <a href="https://discord.gg/GznDJnyqZa" target="_blank" class="primary-btn">
-      Discordへ参加
-    </a>
-  </div>
-
-  <div class="step-card">
-    <span class="step-number">02</span>
-    <h3>サーバー情報</h3>
-
-    <div class="server-info">
-      <div class="copy-box">
-        <span>IP:</span>
-        <code id="ip">natsukida.f5.si</code>
-        <button onclick="copyText('ip')">コピー</button>
-      </div>
-
-      <div class="copy-box">
-        <span>Port:</span>
-        <code id="port">53218</code>
-        <button onclick="copyText('port')">コピー</button>
-      </div>
+    <div class="hero-actions" style="margin-top:20px;">
+      <a href="https://discord.gg/GznDJnyqZa" target="_blank" rel="noopener noreferrer" class="btn primary">公式Discordに参加</a>
+      <a href="rules.html" class="btn secondary">ルールを見る</a>
     </div>
   </div>
-
-  <div class="step-card">
-    <span class="step-number">03</span>
-    <h3>ルール確認</h3>
-    <p>Discord内のルールを必ず確認してください。</p>
-    <a href="rules.html" class="secondary-btn">ルールを見る</a>
-  </div>
-
-  <div class="step-card">
-    <span class="step-number">04</span>
-    <h3>プレイ開始</h3>
-    <p>
-      火打石から文明を築き、都市を作るか、  
-      工業を発展させるか、戦争をするか、平和に暮らすかはあなた次第です。
-    </p>
-  </div>
-
 </section>
 
-<footer>
-  <p>© 2026 Natsuki Community. All rights reserved.</p>
+<section class="section reveal">
+  <div class="container legal-container">
+
+    <div class="legal-card">
+      <h2>参加手順</h2>
+      <ol class="rule-list">
+        <li>ゲーマータグ「Kidakunn」にフレンド申請を送ります。</li>
+        <li>1分ほど待つとフレンドが追加され、フレンド欄に参加ボタンが表示されます。</li>
+        <li>参加ボタンを押してロビーサーバーに参加します。</li>
+        <li>ロビーサーバーの「エルボ！」のNPCをクリックして参加します。</li>
+      </ol>
+    </div>
+
+
+    <div class="legal-card">
+      <h2>参加前に確認すること</h2>
+      <ul class="rule-list">
+        <li>ルールページを確認してください。</li>
+        <li>Discordへの参加を先に行うと案内が受けやすくなります。</li>
+        <li>不明点はお問い合わせまたはDiscordで確認してください。</li>
+      </ul>
+    </div>
+
+    <div class="legal-card">
+      <h2>関連リンク</h2>
+      <ul class="rule-list">
+        <li><a href="rules.html">ルール</a></li>
+        <li><a href="legal.html">利用規約</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+        <li><a href="https://discord.gg/GznDJnyqZa" target="_blank" rel="noopener noreferrer">公式Discord</a></li>
+      </ul>
+    </div>
+
+    <div style="margin-top:24px;">
+      <a href="index.html" class="btn secondary">トップへ戻る</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Natsuki Community. All rights reserved.</p>
+  </div>
 </footer>
 
-<div id="toast">コピーしました</div>
+<div id="toast" class="toast">コピーしました</div>
 
 <script>
-const cards = document.querySelectorAll('.step-card');
-window.addEventListener('scroll', () => {
-  const trigger = window.innerHeight * 0.85;
-  cards.forEach(card => {
-    const top = card.getBoundingClientRect().top;
-    if(top < trigger){
-      card.classList.add('visible');
-    }
-  });
-});
-
 function copyText(id){
   const text = document.getElementById(id).innerText;
   navigator.clipboard.writeText(text);
-  showToast();
+  showToast("コピーしました");
 }
 
-function showToast(){
+function showToast(msg){
   const toast = document.getElementById("toast");
+  toast.innerText = msg;
   toast.classList.add("show");
-  setTimeout(()=> toast.classList.remove("show"),2000);
+  setTimeout(() => toast.classList.remove("show"), 2000);
 }
+
+window.addEventListener('scroll', () => {
+  const cards = document.querySelectorAll('.legal-card');
+  const trigger = window.innerHeight * 0.85;
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if (top < trigger) card.classList.add('visible');
+  });
+});
 </script>
 
+<script src="script.js" defer></script>
 </body>
 </html>

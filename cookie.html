@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>エルボサーバー | Cookieポリシー</title>
-<meta name="description" content="エルボサーバー公式サイトのCookieポリシー">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookieポリシー | エルボ！ Minecraft統合版 建国経済サバイバルサーバー</title>
+  <meta name="description" content="エルボ！公式サイトのCookieポリシー。Cookieの種類・利用目的・管理方法について定めます。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://erbominecraft.com/cookie.html">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="エルボ！">
+  <meta property="og:title" content="Cookieポリシー | エルボ！">
+  <meta property="og:description" content="エルボ！公式サイトのCookieポリシー。">
+  <meta property="og:url" content="https://erbominecraft.com/cookie.html">
+  <meta property="og:image" content="https://erbominecraft.com/assets/img/ogp.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cookieポリシー | エルボ！">
+  <meta name="twitter:description" content="エルボ！公式サイトのCookieポリシー。">
+
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 <body>
 
@@ -15,7 +31,15 @@
       <span class="logo-main">ERBO SERVER</span>
       <span class="logo-sub">Cookie Policy</span>
     </div>
-    <nav class="nav">
+
+    <div class="header-controls">
+      <button id="theme-toggle" class="theme-toggle" aria-label="テーマ切替">☀️ / 🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="nav" aria-label="メインナビゲーション">
       <a href="index.html">トップ</a>
       <a href="about.html">エルボとは</a>
       <a href="how-to-join.html">参加方法</a>
@@ -118,6 +142,8 @@
     <p>© 2026 Natsuki Community. All rights reserved.</p>
   </div>
 </footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 
 <script src="script.js" defer></script>
 </body>

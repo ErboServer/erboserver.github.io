@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <title>エルボサーバー | 利用規約</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Natsuki Communityおよびエルボサーバーの利用規約" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>利用規約 | エルボ！ Minecraft統合版 建国経済サバイバルサーバー</title>
+  <meta name="description" content="なつきコミュニティおよびエルボサーバーの利用規約。参加条件・禁止事項・処罰基準などを定めます。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://erbominecraft.com/legal.html">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="エルボ！">
+  <meta property="og:title" content="利用規約 | エルボ！">
+  <meta property="og:description" content="なつきコミュニティおよびエルボサーバーの利用規約。参加条件・禁止事項・処罰基準などを定めます。">
+  <meta property="og:url" content="https://erbominecraft.com/legal.html">
+  <meta property="og:image" content="https://erbominecraft.com/assets/img/ogp.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="利用規約 | エルボ！">
+  <meta name="twitter:description" content="なつきコミュニティおよびエルボサーバーの利用規約。">
+
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 <body>
 
@@ -17,17 +33,18 @@
     </div>
 
     <div class="header-controls">
-      <button id="theme-toggle" class="theme-toggle" aria-pressed="false">
-        ☀️ / 🌙
+      <button id="theme-toggle" class="theme-toggle" aria-label="テーマ切替">☀️ / 🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </div>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="メインナビゲーション">
       <a href="index.html">トップ</a>
       <a href="about.html">エルボとは</a>
       <a href="how-to-join.html">参加方法</a>
       <a href="rules.html">ルール</a>
-      <a href="legal.html">利用規約</a>
+      <a href="legal.html" aria-current="page">利用規約</a>
       <a href="privacy.html">プライバシーポリシー</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
@@ -249,14 +266,10 @@
       </p>
 
       <h3>第2条（変更・終了）</h3>
-      <p>
-        運営は予告なくサービス内容を変更・停止・終了する場合があります。
-      </p>
+      <p>運営は予告なくサービス内容を変更・停止・終了する場合があります。</p>
 
       <h3>第3条（準拠法・管轄）</h3>
-      <p>
-        本規約は日本法に準拠し、紛争は日本の裁判所を専属管轄とします。
-      </p>
+      <p>本規約は日本法に準拠し、紛争は日本の裁判所を専属管轄とします。</p>
 
       <h3>第4条（未成年利用）</h3>
       <p>
@@ -265,14 +278,10 @@
       </p>
 
       <h3>第5条（ログ確認）</h3>
-      <p>
-        不正調査のためログを確認する場合があります。
-      </p>
+      <p>不正調査のためログを確認する場合があります。</p>
 
       <h3>第6条（分離可能性）</h3>
-      <p>
-        一部条項が無効となった場合でも、その他条項は有効に存続します。
-      </p>
+      <p>一部条項が無効となった場合でも、その他条項は有効に存続します。</p>
     </div>
 
     <div style="margin-top:24px;">
@@ -287,6 +296,8 @@
     <p>© 2026 Natsuki Community. All rights reserved.</p>
   </div>
 </footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 
 <script src="script.js" defer></script>
 </body>

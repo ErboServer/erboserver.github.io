@@ -1,94 +1,113 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>エルボサーバー | お問い合わせ</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | エルボ！ Minecraft統合版 建国経済サバイバルサーバー</title>
+  <meta name="description" content="エルボ！サーバーへのお問い合わせ。メール・Discord・X（旧Twitter）からご連絡いただけます。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://erbominecraft.com/contact.html">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="エルボ！">
+  <meta property="og:title" content="お問い合わせ | エルボ！">
+  <meta property="og:description" content="エルボ！サーバーへのお問い合わせ。メール・Discord・X（旧Twitter）からご連絡いただけます。">
+  <meta property="og:url" content="https://erbominecraft.com/contact.html">
+  <meta property="og:image" content="https://erbominecraft.com/assets/img/ogp.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="お問い合わせ | エルボ！">
+  <meta name="twitter:description" content="エルボ！サーバーへのお問い合わせ。">
+
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
-    <div>
-      <div class="logo-main">ERBO SERVER</div>
+    <div class="logo">
+      <span class="logo-main">ERBO SERVER</span>
       <span class="logo-sub">お問い合わせ</span>
     </div>
-    <nav class="nav">
+
+    <div class="header-controls">
+      <button id="theme-toggle" class="theme-toggle" aria-label="テーマ切替">☀️ / 🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a href="index.html">トップ</a>
       <a href="about.html">エルボとは</a>
       <a href="how-to-join.html">参加方法</a>
       <a href="rules.html">ルール</a>
       <a href="legal.html">利用規約</a>
       <a href="privacy.html">プライバシーポリシー</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="contact.html" aria-current="page">お問い合わせ</a>
     </nav>
   </div>
 </header>
 
-<section class="section">
+<section class="sub-hero fade-in">
   <div class="container">
-
-    <h2>お問い合わせ</h2>
-    <p style="color:var(--text-soft); margin-bottom:30px;">
+    <h1>お問い合わせ</h1>
+    <p class="rule-note">
       ご質問・不具合報告・提案などはこちらからご連絡ください。
     </p>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="container legal-container">
 
     <div class="legal-card">
-
-      <h3>メール</h3>
+      <h2>メール</h2>
       <div class="copy-box">
         <code id="email">erubo.info@gmail.com</code>
-        <button onclick="copyText('email')">コピー</button>
+        <button onclick="copyText('email', 'メールアドレスをコピーしました')">コピー</button>
         <a href="mailto:erubo.info@gmail.com" class="btn secondary small">送信する</a>
       </div>
+    </div>
 
-      <hr style="margin:30px 0; border-color:var(--card-border);">
-
-      <h3>Discord</h3>
-      <p style="color:var(--text-soft); margin-bottom:10px;">
+    <div class="legal-card">
+      <h2>Discord</h2>
+      <p style="color:var(--text-soft); margin-bottom:12px;">
         サーバー内の #お問い合わせ チャンネルをご利用ください。
       </p>
-      <a href="https://discord.gg/GznDJnyqZa" target="_blank" class="btn primary">
+      <a href="https://discord.gg/GznDJnyqZa" target="_blank" rel="noopener noreferrer" class="btn primary">
         Discordへ参加
       </a>
+    </div>
 
-      <hr style="margin:30px 0; border-color:var(--card-border);">
-
-      <h3>𝕏 (旧Twitter)</h3>
+    <div class="legal-card">
+      <h2>𝕏 (旧Twitter)</h2>
       <div class="copy-box">
         <code id="xid">@Natsukidakunn</code>
-        <button onclick="copyText('xid')">コピー</button>
-        <a href="https://x.com/Natsukidakunn" target="_blank" class="btn secondary small">
+        <button onclick="copyText('xid', 'IDをコピーしました')">コピー</button>
+        <a href="https://x.com/Natsukidakunn" target="_blank" rel="noopener noreferrer" class="btn secondary small">
           プロフィールを見る
         </a>
       </div>
+    </div>
 
+    <div style="margin-top:24px;">
+      <a href="index.html" class="btn secondary">トップへ戻る</a>
     </div>
 
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="container">
-    © 2026 Natsuki Community. All rights reserved.
+  <div class="container footer-inner">
+    <p>© 2026 Natsuki Community. All rights reserved.</p>
   </div>
 </footer>
 
-<div id="toast">コピーしました</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-<script>
-function copyText(id){
-  const text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text);
-  showToast();
-}
-
-function showToast(){
-  const toast = document.getElementById("toast");
-  toast.classList.add("show");
-  setTimeout(()=> toast.classList.remove("show"),2000);
-}
-</script>
-
+<script src="script.js" defer></script>
 </body>
 </html>

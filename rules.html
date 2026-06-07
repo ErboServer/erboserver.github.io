@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <title>エルボサーバー | ルール</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Natsuki Communityおよびエルボサーバーのルール" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サーバールール | エルボ！ Minecraft統合版 建国経済サバイバルサーバー</title>
+  <meta name="description" content="エルボ！サーバーおよびなつきコミュニティのルール一覧。チャット・PVP・戦争・チートなどに関するルールを掲載しています。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://erbominecraft.com/rules.html">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="エルボ！">
+  <meta property="og:title" content="サーバールール | エルボ！ Minecraft統合版 建国経済サバイバルサーバー">
+  <meta property="og:description" content="エルボ！サーバーおよびなつきコミュニティのルール一覧。チャット・PVP・戦争・チートなどに関するルールを掲載しています。">
+  <meta property="og:url" content="https://erbominecraft.com/rules.html">
+  <meta property="og:image" content="https://erbominecraft.com/assets/img/ogp.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="エルボ！サーバールール">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="サーバールール | エルボ！">
+  <meta name="twitter:description" content="エルボ！サーバーおよびなつきコミュニティのルール一覧。">
+  <meta name="twitter:image" content="https://erbominecraft.com/assets/img/ogp.jpg">
+
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 <body>
 
@@ -17,16 +37,17 @@
     </div>
 
     <div class="header-controls">
-      <button id="theme-toggle" class="theme-toggle" aria-pressed="false">
-        ☀️ / 🌙
+      <button id="theme-toggle" class="theme-toggle" aria-label="テーマ切替">☀️ / 🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </div>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="メインナビゲーション">
       <a href="index.html">トップ</a>
       <a href="about.html">エルボとは</a>
       <a href="how-to-join.html">参加方法</a>
-      <a href="rules.html">ルール</a>
+      <a href="rules.html" aria-current="page">ルール</a>
       <a href="legal.html">利用規約</a>
       <a href="privacy.html">プライバシーポリシー</a>
       <a href="contact.html">お問い合わせ</a>
@@ -38,19 +59,14 @@
   <div class="container">
     <h1>サーバールール</h1>
     <p class="rule-note">安全で公正な建国サーバー運営のための規則です。</p>
-
     <div class="hero-actions" style="margin-top:20px;">
-      <a href="https://status.erbo.f5.si" target="_blank" class="btn secondary" rel="noopener noreferrer">
-        サーバーステータス
-      </a>
-      <a href="https://apply.erbo.f5.si" target="_blank" class="btn secondary" rel="noopener noreferrer">
-        運営応募
-      </a>
+      <a href="https://status.erbo.f5.si" target="_blank" class="btn secondary" rel="noopener noreferrer">サーバーステータス</a>
+      <a href="https://apply.erbo.f5.si" target="_blank" class="btn secondary" rel="noopener noreferrer">運営応募</a>
     </div>
   </div>
 </section>
 
-<section class="section section-alt">
+<section class="section section-alt reveal">
   <div class="container">
 
     <h2>なつきコミュニティ 利用規約</h2>
@@ -264,6 +280,8 @@
     <p>© 2026 Natsuki Community. All rights reserved.</p>
   </div>
 </footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 
 <script src="script.js" defer></script>
 </body>
